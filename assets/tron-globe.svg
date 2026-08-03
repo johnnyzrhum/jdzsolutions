@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#0b68ff" stop-opacity=".34"/>
+      <stop offset=".65" stop-color="#053373" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#020711" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="620" fill="url(#g)"/>
+  <g transform="translate(400 305)" fill="none" stroke="#1598ff" filter="url(#glow)">
+    <circle r="210" stroke-width="3"/>
+    <ellipse rx="210" ry="75" stroke-width="2" opacity=".75"/>
+    <ellipse rx="210" ry="140" stroke-width="2" opacity=".5"/>
+    <ellipse rx="75" ry="210" stroke-width="2" opacity=".75"/>
+    <ellipse rx="140" ry="210" stroke-width="2" opacity=".5"/>
+    <path d="M-210 0h420M-190-92h380M-190 92h380" opacity=".6"/>
+    <path d="M-35-180l-48 15-28 42-44 22-16 48 26 24 18 53 60 17 13 57 49 15 41-24 7-52 58-29 21-51-33-34-15-55-49-24-40 14z"
+          fill="#0b63c7" fill-opacity=".2" stroke="#34d7ff" stroke-width="2"/>
+    <path d="M75-146l50 9 32 31 27 17 10 45-22 33 4 43-36 45-55 18-29 41-39-18-12-52 22-35-13-38 24-28 4-55z"
+          fill="#0b63c7" fill-opacity=".16" stroke="#34d7ff" stroke-width="2"/>
+    <g stroke-width="2" opacity=".85">
+      <ellipse rx="300" ry="90" transform="rotate(12)"/>
+      <ellipse rx="300" ry="90" transform="rotate(-15)"/>
+      <ellipse rx="250" ry="52" transform="rotate(28)"/>
+    </g>
+    <g fill="#34d7ff" stroke="none">
+      <circle cx="-145" cy="-62" r="7"/><circle cx="-70" cy="105" r="6"/><circle cx="90" cy="-92" r="7"/>
+      <circle cx="152" cy="46" r="6"/><circle cx="16" cy="-170" r="5"/><circle cx="-190" cy="42" r="5"/>
+    </g>
+  </g>
+  <g transform="translate(400 535)" fill="none" stroke="#1598ff" opacity=".85">
+    <ellipse rx="235" ry="42" stroke-width="3"/>
+    <ellipse rx="180" ry="28" stroke-width="2"/>
+    <ellipse rx="110" ry="16" stroke-width="2"/>
+  </g>
+</svg>
