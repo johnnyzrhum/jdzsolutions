@@ -208,32 +208,52 @@
         </div>
 
         <form class="contact-form reveal" action="https://formspree.io/f/xpqvvvor" method="POST">
-          <div class="form-grid">
-            <label>
-              <span>Name</span>
-              <input type="text" name="name" autocomplete="name" required>
-            </label>
-            <label>
-              <span>Email</span>
-              <input type="email" name="email" autocomplete="email" required>
-            </label>
-            <label>
-              <span>Company</span>
-              <input type="text" name="company" autocomplete="organization">
-            </label>
-            <label>
-              <span>Phone</span>
-              <input type="tel" name="phone" autocomplete="tel">
-            </label>
-          </div>
-          <label>
-            <span>Project or challenge</span>
-            <textarea name="message" rows="6" required></textarea>
-          </label>
-          <input type="hidden" name="_subject" value="New JDZ Solutions website inquiry">
-          <button class="button button-primary" type="submit">Let's Connect</button>
-          <p class="form-note">Replace the Formspree placeholder in <code>index.html</code> before publishing the contact form.</p>
-        </form>
+
+  <div class="form-grid">
+    <label>
+      <span>Name</span>
+      <input type="text" name="name" autocomplete="name" required>
+    </label>
+
+    <label>
+      <span>Email</span>
+      <input type="email" name="email" autocomplete="email" required>
+    </label>
+
+    <label>
+      <span>Company</span>
+      <input type="text" name="company" autocomplete="organization">
+    </label>
+
+    <label>
+      <span>Phone</span>
+      <input type="tel" name="phone" autocomplete="tel">
+    </label>
+  </div>
+
+  <label>
+    <span>Project or Challenge</span>
+    <textarea name="message" rows="6" required></textarea>
+  </label>
+
+  <!-- Email Subject -->
+  <input type="hidden" name="_subject" value="New JDZ Solutions Website Inquiry">
+
+  <!-- Disable CAPTCHA -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Honeypot Spam Trap -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <button class="button button-primary" type="submit">
+    Let's Connect
+  </button>
+
+  <p class="form-note">
+    Every inquiry is reviewed personally. I typically respond within one business day.
+  </p>
+
+</form>
       </div>
     </section>
   </main>
