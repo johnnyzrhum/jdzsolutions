@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request a JDZ Solutions media platform demo or needs assessment. Requests are reviewed for solution fit before scheduling.">
+  <meta name="theme-color" content="#020711">
+  <title>Demo &amp; Needs Assessment | JDZ Solutions</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="JDZ Solutions home">
+        <img src="assets/jdz-solutions-logo.png" alt="JDZ Solutions">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html#media-solutions">Solutions</a>
+        <a href="agencies.html">Agencies</a>
+        <a href="enterprises.html">Enterprises</a>
+        <a href="growing-businesses.html">Growing Businesses</a>
+        <a class="nav-cta" href="demo-assessment.html">Request a Demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-grid">
+      <div class="hero-circuit hero-circuit-left" aria-hidden="true"></div>
+      <div class="hero-circuit hero-circuit-right" aria-hidden="true"></div>
+
+      <div class="container hero-inner single-column">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Demo &amp; Needs Assessment</p>
+          <h1>
+            <span>See the Solution</span>
+            <span class="accent">In Action</span>
+          </h1>
+          <p class="hero-text">
+            Not every organization needs the same platform, production
+            process, or level of automation. JDZ Solutions begins by
+            understanding the content you need, how often you need it, the
+            source materials available, the audiences involved, and where
+            the completed media will be used.
+          </p>
+          <p class="hero-text">
+            Demonstrations and assessments are selected based on your
+            organization's goals, content requirements, and intended
+            distribution channels. Because capacity is limited, requests
+            are reviewed for solution fit before scheduling.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Tell Us What You Need</p>
+          <h2>What would you like to discuss?</h2>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/xpqvvvor" method="POST">
+          <label>
+            <span>What would you like to discuss?</span>
+            <select name="inquiry_type" id="inquiry-type" required>
+              <option value="" disabled selected>Choose one</option>
+              <option value="Platform Demo">Platform / Product Demonstration</option>
+              <option value="Needs Assessment">Needs Assessment</option>
+              <option value="Beta Participation">Beta Participation</option>
+              <option value="Agency Use Case">Agency Use Case</option>
+              <option value="Enterprise Use Case">Enterprise Use Case</option>
+              <option value="Growing Business Use Case">Growing Business Use Case</option>
+              <option value="Implementation Support">Implementation Support</option>
+              <option value="General Inquiry">General Inquiry</option>
+            </select>
+          </label>
+
+          <div class="form-grid">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Business Email</span>
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>
+              <span>Company</span>
+              <input type="text" name="company" autocomplete="organization" required>
+            </label>
+            <label>
+              <span>Role</span>
+              <input type="text" name="role" autocomplete="organization-title">
+            </label>
+            <label>
+              <span>Website</span>
+              <input type="url" name="website" autocomplete="url">
+            </label>
+            <label>
+              <span>Organization Type</span>
+              <select name="organization_type" id="org-type">
+                <option value="" disabled selected>Choose one</option>
+                <option value="Agency">Agency / Service Provider</option>
+                <option value="Enterprise">Enterprise</option>
+                <option value="Multi-Brand Organization">Multi-Brand Organization</option>
+                <option value="Growing Business">Growing Business</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            <span>What do you need to create, and what's the goal?</span>
+            <textarea name="use_case" rows="4" required></textarea>
+          </label>
+
+          <fieldset id="scale-fields" hidden>
+            <legend>A bit more about your scale</legend>
+            <div class="form-grid">
+              <label>
+                <span>Customers, brands, products, or locations supported</span>
+                <input type="text" name="scale_count">
+              </label>
+              <label>
+                <span>Approximate content volume per month</span>
+                <input type="text" name="content_volume">
+              </label>
+              <label>
+                <span>Languages required</span>
+                <input type="text" name="languages">
+              </label>
+              <label>
+                <span>Required formats or channels</span>
+                <input type="text" name="formats">
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-grid">
+            <label>
+              <span>Current production process</span>
+              <input type="text" name="current_process" placeholder="e.g. in-house team, freelancers, another platform">
+            </label>
+            <label>
+              <span>Desired timeline</span>
+              <input type="text" name="timeline" placeholder="e.g. this quarter, exploring options">
+            </label>
+          </div>
+
+          <!-- Email Subject -->
+          <input type="hidden" name="_subject" value="New JDZ Solutions Demo / Needs Assessment Request">
+
+          <!-- Disable CAPTCHA -->
+          <input type="hidden" name="_captcha" value="false">
+
+          <!-- Honeypot Spam Trap -->
+          <input type="text" name="_gotcha" style="display:none">
+
+          <button class="button button-primary" type="submit">
+            Submit Request
+          </button>
+
+          <p class="form-note">
+            Every request is reviewed for solution fit before scheduling.
+            Submitting this form does not guarantee a demonstration, beta
+            participation, or engagement. Prefer a general inquiry
+            instead? Use the <a href="index.html#contact">contact form</a>
+            on the homepage.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-nav" aria-label="Other solutions">
+        <a href="index.html#other-solutions">Other Solutions</a>
+        <a href="ai-strategy-solutions.html">AI Strategy & Solutions</a>
+        <a href="ui-ux-design.html">UI/UX Design</a>
+        <a href="automation-solutions.html">Automation Solutions</a>
+        <a href="it-solutions.html">IT Solutions</a>
+        <a href="digital-transformations.html">Digital Transformations</a>
+        <a href="product-innovation.html">Product & Innovation</a>
+      </nav>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> JDZ Solutions. All rights reserved.</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="forms.js"></script>
+</body>
+</html>
