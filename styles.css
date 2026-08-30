@@ -86,8 +86,15 @@ button, input, textarea { font: inherit; }
 .hero-circuit-right { right: -15vw; top: 22%; transform: scaleX(-1); }
 
 .section-heading { max-width: 760px; margin-bottom: 42px; }
-.section-heading h2 { font-size: clamp(2rem, 4vw, 3.9rem); line-height: 1.08; margin: 0 0 18px; letter-spacing: -.035em; }
+.section-heading h1, .section-heading h2 { font-size: clamp(2rem, 4vw, 3.9rem); line-height: 1.08; margin: 0 0 18px; letter-spacing: -.035em; }
 .section-heading p:not(.eyebrow) { color: var(--muted); font-size: 1.04rem; }
+
+.legal-content { max-width: 760px; margin-inline: auto; }
+.legal-body h2 { font-size: 1.5rem; margin: 40px 0 14px; letter-spacing: -.01em; }
+.legal-body h3 { font-size: 1.1rem; margin: 28px 0 10px; color: var(--cyan); }
+.legal-body p, .legal-body li { color: var(--muted); margin: 0 0 14px; line-height: 1.7; }
+.legal-body ul { margin: 0 0 14px; padding-left: 22px; }
+.legal-body a { color: var(--cyan); }
 
 .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .glass-card {
