@@ -293,6 +293,68 @@
             campaigns — including agency-managed client campaigns and
             message or creative testing across multiple campaign sizes.
           </p>
+        </div>
+
+        <div class="cine-flow" id="cine-panel-tidewell">
+          <p class="cine-label cine-label-script">The Screenplay</p>
+          <p class="cine-label cine-label-film">The Finished Spot</p>
+
+          <div class="cine-script">
+            <div class="screenplay" role="img" aria-label="Illustration of a screenplay for a 3-scene product promo: Hero Reveal, On the Trail, and Payoff Shot, each with a shot and a voice-over line">
+              <div class="screenplay-head" aria-hidden="true">
+                <span class="screenplay-title">Tidewell · Product Promo</span>
+                <span class="screenplay-chips"><span>3 scenes</span><span>3 shots</span><span>Voice-over</span></span>
+              </div>
+              <div class="screenplay-scenes" aria-hidden="true">
+              <article class="scene">
+                <div class="scene-top"><span class="scene-num">Scene 1</span><span class="shot-tag">Shot 1.1</span></div>
+                <h4>Hero Reveal</h4>
+                <div class="copy-bars"><i></i><i></i></div>
+                <div class="vo-bar"><span>VO</span><i></i></div>
+              </article>
+              <article class="scene">
+                <div class="scene-top"><span class="scene-num">Scene 2</span><span class="shot-tag">Shot 2.2</span></div>
+                <h4>On the Trail</h4>
+                <div class="copy-bars"><i></i><i></i></div>
+                <div class="vo-bar"><span>VO</span><i></i></div>
+              </article>
+              <article class="scene">
+                <div class="scene-top"><span class="scene-num">Scene 3</span><span class="shot-tag">Shot 3.3</span></div>
+                <h4>Payoff Shot</h4>
+                <div class="copy-bars"><i></i><i></i></div>
+                <div class="vo-bar"><span>VO</span><i></i></div>
+              </article>
+              </div>
+            </div>
+          </div>
+
+          <svg class="cine-connector" viewBox="0 0 56 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g style="fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round">
+              <path d="M0,60 C28,60 28,150 44,150"/>
+              <path d="M0,150 L44,150"/>
+              <path d="M0,240 C28,240 28,150 44,150"/>
+              <path d="M38,142 L50,150 L38,158" style="stroke:var(--cyan)"/>
+            </g>
+          </svg>
+          <div class="cine-connector-mobile" aria-hidden="true">&#8595;</div>
+
+          <div class="film-player">
+            <video controls preload="metadata" playsinline poster="assets/video/tidewell-product-promo-poster.jpg">
+              <source src="assets/video/tidewell-product-promo.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
+          </div>
+          <div class="film-meta">
+            <div class="lang-toggle" role="group" aria-label="Voice-over language">
+              <button class="lang-btn" type="button" aria-pressed="true" data-src="assets/video/tidewell-product-promo.mp4">English</button>
+              <button class="lang-btn" type="button" aria-pressed="false" lang="es" data-src="assets/video/tidewell-product-promo-es.mp4">Español</button>
+            </div>
+            <p class="film-caption">Tidewell is a fictional brand created to demonstrate offer-ready product advertising.</p>
+            <p class="film-caption film-note">One video, two voices. The English and Spanish versions use the same footage with AI-assisted voice-over, produced through an automated workflow.</p>
+          </div>
+        </div>
+
+        <div class="hero-actions" style="margin-top:32px; justify-content:center;">
           <a class="button button-secondary button-tight" href="demo-assessment.html">Explore Advertising Solutions</a>
         </div>
       </div>
@@ -562,6 +624,7 @@
   </footer>
 
   <script src="script.js"></script>
-  <script src="cine-tabs.js"></script>
+  <script src="cine-tabs.js?v=2"></script>
+  <script src="lang-toggle.js"></script>
 </body>
 </html>
