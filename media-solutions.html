@@ -313,7 +313,12 @@
           </p>
         </div>
 
-        <div class="cine-flow" id="cine-panel-tidewell">
+        <div class="cine-tabs reveal" role="tablist" aria-label="Commercial examples">
+          <button class="cine-tab" type="button" role="tab" id="cine-tab-tidewell" aria-selected="true" aria-controls="cine-panel-tidewell">Product Promo</button>
+          <button class="cine-tab" type="button" role="tab" id="cine-tab-tarpon" aria-selected="false" aria-controls="cine-panel-tarpon" tabindex="-1">Local Service Spot</button>
+        </div>
+
+        <div class="cine-flow" id="cine-panel-tidewell" role="tabpanel" aria-labelledby="cine-tab-tidewell">
           <p class="cine-label cine-label-script">The Screenplay</p>
           <p class="cine-label cine-label-film">The Finished Spot</p>
 
@@ -375,6 +380,72 @@
             </div>
             <p class="film-caption">Tidewell is a fictional brand created to demonstrate offer-ready product advertising.</p>
             <p class="film-caption film-note">One video, two voices. The English and Spanish versions use the same footage with AI-assisted voice-over, produced through an automated workflow.</p>
+          </div>
+        </div>
+
+
+        <div class="cine-flow" id="cine-panel-tarpon" role="tabpanel" aria-labelledby="cine-tab-tarpon" hidden>
+          <p class="cine-label cine-label-script">The Screenplay</p>
+          <p class="cine-label cine-label-film">The Finished Spot</p>
+
+          <div class="cine-script">
+            <div class="screenplay" role="group" aria-label="Illustration of a screenplay for a 3-scene local service spot: The Swelter, Help Arrives, and Cool Relief, each with a shot and a voice-over line">
+              <button type="button" class="sp-info" aria-label="About this screenplay" aria-expanded="false" aria-controls="sp-tip-tarpon">i</button>
+              <div class="sp-tip" id="sp-tip-tarpon" role="tooltip">
+                <strong>AI-assisted screenplay</strong>
+                Created from a brief with AI assistance, then refined by hand. A screenplay like this can be set up for automated, variable video production, so one creative can produce many versions.
+                <em>Select a scene to jump to it in the video.</em>
+              </div>
+              <div class="screenplay-head" aria-hidden="true">
+                <span class="screenplay-title">Tarpon Home Comfort · Local Service Spot</span>
+                <span class="screenplay-chips"><span>3 scenes</span><span>3 shots</span><span>Voice-over</span></span>
+              </div>
+              <div class="screenplay-scenes">
+              <button type="button" class="scene" data-start="0" aria-label="Scene 1: The Swelter. Play from this scene.">
+                <span class="scene-top"><span class="scene-num">Scene 1</span><span class="shot-tag">Shot 1.1</span></span>
+                <span class="scene-title">The Swelter</span>
+                <span class="copy-bars" aria-hidden="true"><i></i><i></i></span>
+                <span class="vo-bar" aria-hidden="true"><span>VO</span><i></i></span>
+              </button>
+              <button type="button" class="scene" data-start="8.0" aria-label="Scene 2: Help Arrives. Play from this scene.">
+                <span class="scene-top"><span class="scene-num">Scene 2</span><span class="shot-tag">Shot 2.2</span></span>
+                <span class="scene-title">Help Arrives</span>
+                <span class="copy-bars" aria-hidden="true"><i></i><i></i></span>
+                <span class="vo-bar" aria-hidden="true"><span>VO</span><i></i></span>
+              </button>
+              <button type="button" class="scene" data-start="15.5" aria-label="Scene 3: Cool Relief. Play from this scene.">
+                <span class="scene-top"><span class="scene-num">Scene 3</span><span class="shot-tag">Shot 3.3</span></span>
+                <span class="scene-title">Cool Relief</span>
+                <span class="copy-bars" aria-hidden="true"><i></i><i></i></span>
+                <span class="vo-bar" aria-hidden="true"><span>VO</span><i></i></span>
+              </button>
+              </div>
+            </div>
+          </div>
+
+          <svg class="cine-connector" viewBox="0 0 56 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g style="fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round">
+              <path d="M0,60 C28,60 28,150 44,150"/>
+              <path d="M0,150 L44,150"/>
+              <path d="M0,240 C28,240 28,150 44,150"/>
+              <path d="M38,142 L50,150 L38,158" style="stroke:var(--cyan)"/>
+            </g>
+          </svg>
+          <div class="cine-connector-mobile" aria-hidden="true">&#8595;</div>
+
+          <div class="film-player">
+            <video controls preload="none" playsinline poster="assets/video/tarpon-home-comfort-poster.jpg">
+              <source src="assets/video/tarpon-home-comfort-en.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
+          </div>
+          <div class="film-meta">
+            <div class="lang-toggle" role="group" aria-label="Voice-over language">
+              <button class="lang-btn" type="button" aria-pressed="true" data-src="assets/video/tarpon-home-comfort-en.mp4">English</button>
+              <button class="lang-btn" type="button" aria-pressed="false" lang="es" data-src="assets/video/tarpon-home-comfort-es.mp4">Español</button>
+            </div>
+            <p class="film-caption">Tarpon Home Comfort is a fictional brand created to demonstrate local, multi-location advertising.</p>
+            <p class="film-caption film-note">One video, two voices. The English and Spanish versions use the same footage with AI-assisted voice-over, produced through an automated workflow. The city and phone number sit in the end card, so the same footage can serve any branch.</p>
           </div>
         </div>
 
