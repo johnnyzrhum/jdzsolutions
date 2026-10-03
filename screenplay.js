@@ -39,7 +39,7 @@
       scene.addEventListener('click', function () { jump(i); });
     });
 
-    ['timeupdate', 'play', 'pause', 'seeked', 'loadedmetadata'].forEach(function (name) {
+    ['timeupdate', 'play', 'pause', 'seeked', 'loadedmetadata', 'emptied'].forEach(function (name) {
       player.addEventListener(name, sync);
     });
 

@@ -11,7 +11,11 @@
         panel.hidden = !on;
         if (!on) {
           var v = panel.querySelector('video');
-          if (v) v.pause();
+          if (v) {
+            var touched = v.currentTime > 0 || !v.paused || v.ended;
+            v.pause();
+            if (touched) v.load();
+          }
         }
       });
     }
