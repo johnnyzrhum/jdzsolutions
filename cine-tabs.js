@@ -1,4 +1,6 @@
 (function () {
+  var byPanelId = {};
+
   Array.prototype.slice.call(document.querySelectorAll('.cine-tabs')).forEach(function (group) {
     var tabs = Array.prototype.slice.call(group.querySelectorAll('.cine-tab'));
 
@@ -21,6 +23,7 @@
     }
 
     tabs.forEach(function (tab, i) {
+      byPanelId[tab.getAttribute('aria-controls')] = { group: group, tab: tab, select: select };
       tab.addEventListener('click', function () { select(tab); });
       tab.addEventListener('keydown', function (e) {
         var next;
@@ -33,4 +36,17 @@
       });
     });
   });
+
+  function openFromHash(smooth) {
+    var id;
+    try { id = decodeURIComponent(window.location.hash.slice(1)); } catch (e) { return; }
+    var entry = byPanelId[id];
+    if (!entry) return;
+    entry.select(entry.tab);
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    entry.group.scrollIntoView({ block: 'start', behavior: smooth && !calm ? 'smooth' : 'instant' });
+  }
+
+  window.addEventListener('hashchange', function () { openFromHash(true); });
+  openFromHash(false);
 })();

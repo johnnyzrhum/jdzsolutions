@@ -194,7 +194,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-
 
 .button-tight { min-height: 42px; padding: 0 18px; font-size: .72rem; }
 
-.cine-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 40px auto 28px; }
+.cine-tabs { scroll-margin-top: 128px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 40px auto 28px; }
 .cine-tab { appearance: none; cursor: pointer; padding: 11px 22px; border: 1px solid var(--line); border-radius: 999px; background: rgba(21, 140, 255, .06); color: var(--muted); font: inherit; font-size: .76rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; transition: .2s ease; }
 .cine-tab:hover { color: var(--white); border-color: rgba(52, 215, 255, .6); }
 .cine-tab[aria-selected="true"] { color: var(--white); border-color: var(--cyan); background: rgba(52, 215, 255, .14); box-shadow: 0 0 22px rgba(18, 133, 255, .22); }
