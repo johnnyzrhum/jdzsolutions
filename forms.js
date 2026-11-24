@@ -33,3 +33,18 @@
   });
   if (matched) inquiryType.value = requested;
 })();
+
+// Captures ?ref=<slug> (the postcard a visitor came from) into a hidden "ref" field, and adds it to
+// the email subject, so each request says which card it came from.
+(function () {
+  var refField = document.querySelector('.contact-form input[name="ref"]');
+  if (!refField) return;
+
+  var params = new URLSearchParams(window.location.search);
+  var ref = (params.get('ref') || '').replace(/[^\w.\-]/g, '').slice(0, 80);
+  if (!ref) return;
+
+  refField.value = ref;
+  var subject = refField.form.querySelector('input[name="_subject"]');
+  if (subject) subject.value += ' (' + ref + ')';
+})();
