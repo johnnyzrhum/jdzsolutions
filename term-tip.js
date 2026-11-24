@@ -20,10 +20,9 @@
     }
 
     button.addEventListener('click', function (e) {
-      e.stopPropagation();
       if (tip.hidden) show(); else hide();
     });
-    document.addEventListener('click', hide);
+    document.addEventListener('click', function (e) { if (!wrap.contains(e.target)) hide(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
   });
 })();
