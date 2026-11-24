@@ -193,6 +193,12 @@ button, input, textarea { font: inherit; }
 .contact-lines small { color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
 .contact-lines a { color: var(--white); font-size: 1.1rem; font-weight: 600; text-decoration: none; }
 .contact-lines a:hover { color: var(--cyan); }
+#get-in-touch { scroll-margin-top: 70px; }
+.float-cta { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px)); z-index: 50; display: inline-flex; align-items: center; gap: 9px; padding: 13px 20px; border-radius: 999px; opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .25s ease, transform .25s ease, box-shadow .2s ease; }
+.float-cta[hidden] { display: none; }
+.float-cta.is-shown { opacity: 1; transform: none; pointer-events: auto; }
+.float-cta svg { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+@media (prefers-reduced-motion: reduce) { .float-cta { transition: none; transform: none; } }
 .sample-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 .sample { margin: 0; }
 .sample figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: .9rem; }
