@@ -156,6 +156,12 @@ button, input, textarea { font: inherit; }
 .contact-form textarea { resize: vertical; }
 .contact-form .button { justify-self: end; }
 .hero-slogan { margin: 22px 0 0; color: var(--cyan); font-size: 1.15rem; font-weight: 700; letter-spacing: .02em; }
+.sample .film-player { position: relative; }
+.expand-btn { position: absolute; top: 10px; right: 10px; z-index: 2; padding: 7px 14px; border: 1px solid rgba(52, 215, 255, .5); border-radius: 999px; background: rgba(2, 7, 17, .78); color: #f7fbff; font: inherit; font-size: .78rem; font-weight: 600; letter-spacing: .04em; cursor: pointer; }
+.expand-btn:hover, .expand-btn:focus-visible { border-color: var(--cyan); }
+.film-player.is-expanded { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 0; box-shadow: none; background: #01050b; }
+.film-player.is-expanded video { width: min(96vw, 1400px); max-height: 88vh; }
+.film-player.is-expanded .expand-btn { top: 16px; right: 16px; }
 .sample-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 .sample { margin: 0; }
 .sample figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: .9rem; }
