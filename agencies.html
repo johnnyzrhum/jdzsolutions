@@ -102,27 +102,87 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">See It For Your Clients</p>
-          <h2>Four ways one master becomes many</h2>
+          <h2>One master, shown as a video, a postcard, and a page</h2>
+          <p>Four examples for a fictional agency. Each one starts from a single master.</p>
         </div>
-        <div class="sample-grid">
-          <figure class="sample reveal">
-            <div class="film-player"><video controls controlsList="nodownload noplaybackrate" disablePictureInPicture preload="none" playsinline poster="assets/video/sample-inventory-poster.jpg"><source src="assets/video/sample-inventory.mp4" type="video/mp4"></video></div>
-            <figcaption>Inventory video</figcaption>
-          </figure>
-          <figure class="sample reveal">
-            <div class="film-player"><video controls controlsList="nodownload noplaybackrate" disablePictureInPicture preload="none" playsinline poster="assets/video/sample-service-poster.jpg"><source src="assets/video/sample-service.mp4" type="video/mp4"></video></div>
-            <figcaption>Service reminder</figcaption>
-          </figure>
-          <figure class="sample reveal">
-            <div class="film-player"><video controls controlsList="nodownload noplaybackrate" disablePictureInPicture preload="none" playsinline poster="assets/video/sample-offer-poster.jpg"><source src="assets/video/sample-offer.mp4" type="video/mp4"></video></div>
-            <figcaption>Local offer</figcaption>
-          </figure>
-          <figure class="sample reveal">
-            <div class="film-player"><video controls controlsList="nodownload noplaybackrate" disablePictureInPicture preload="none" playsinline poster="assets/video/sample-brand-poster.jpg"><source src="assets/video/sample-brand.mp4" type="video/mp4"></video></div>
-            <figcaption>Brand studio</figcaption>
-          </figure>
+
+        <div class="cine-tabs reveal" role="tablist" aria-label="Sample examples">
+          <button class="cine-tab" type="button" role="tab" id="proof-tab-inventory" aria-selected="true" aria-controls="proof-panel-inventory">Inventory video</button>
+          <button class="cine-tab" type="button" role="tab" id="proof-tab-service" aria-selected="false" aria-controls="proof-panel-service" tabindex="-1">Service reminder</button>
+          <button class="cine-tab" type="button" role="tab" id="proof-tab-offer" aria-selected="false" aria-controls="proof-panel-offer" tabindex="-1">Local offer</button>
+          <button class="cine-tab" type="button" role="tab" id="proof-tab-brand" aria-selected="false" aria-controls="proof-panel-brand" tabindex="-1">Brand studio</button>
         </div>
-        <p class="film-caption">Sam and Hawkins &amp; Flynn are fictional, created to demonstrate personalized video. Vehicles, prices, and dealer names are made up, and the vehicles and presenter are AI-generated.</p>
+
+        <div class="proof" id="proof-panel-inventory" role="tabpanel" aria-labelledby="proof-tab-inventory">
+          <div class="proof-main">
+            <p class="proof-label">The Video</p>
+            <figure class="sample">
+              <div class="film-player"><video controls controlsList="nodownload noplaybackrate" disablePictureInPicture preload="none" playsinline poster="assets/video/sample-inventory-poster.jpg"><source src="assets/video/sample-inventory.mp4" type="video/mp4"></video></div>
+            </figure>
+            <p class="proof-label">The Postcard, Front and Back</p>
+            <div class="proof-cards">
+              <img src="assets/samples/card-g1-front.jpg" width="1100" height="738" loading="lazy" alt="Front of a sample postcard for one dealer's inventory video, addressed to Sam at Hawkins &amp; Flynn, with a QR code to scan">
+              <img src="assets/samples/card-g1-back.jpg" width="1100" height="738" loading="lazy" alt="Back of the sample postcard: a handwritten-style message to Sam, signed JDZ Solutions">
+            </div>
+          </div>
+          <div class="proof-side">
+            <p class="proof-label">The Landing Page</p>
+            <div class="proof-phone"><img src="assets/samples/page-g1.jpg" width="520" height="1125" loading="lazy" alt="The personal landing page opened by the postcard's QR code, shown on a phone"></div>
+          </div>
+        </div>
+        <div class="proof" id="proof-panel-service" role="tabpanel" aria-labelledby="proof-tab-service" hidden>
+          <div class="proof-main">
+            <p class="proof-label">The Video</p>
+            <figure class="sample">
+              <div class="film-player"><video controls controlsList="nodownload noplaybackrate" disablePictureInPicture preload="none" playsinline poster="assets/video/sample-service-poster.jpg"><source src="assets/video/sample-service.mp4" type="video/mp4"></video></div>
+            </figure>
+            <p class="proof-label">The Postcard, Front and Back</p>
+            <div class="proof-cards">
+              <img src="assets/samples/card-g2-front.jpg" width="1100" height="738" loading="lazy" alt="Front of a sample postcard for a service reminder, addressed to Sam at Hawkins &amp; Flynn, with a QR code to scan">
+              <img src="assets/samples/card-g2-back.jpg" width="1100" height="738" loading="lazy" alt="Back of the sample postcard: a handwritten-style message to Sam, signed JDZ Solutions">
+            </div>
+          </div>
+          <div class="proof-side">
+            <p class="proof-label">The Landing Page</p>
+            <div class="proof-phone"><img src="assets/samples/page-g2.jpg" width="520" height="1125" loading="lazy" alt="The personal landing page opened by the postcard's QR code, shown on a phone"></div>
+          </div>
+        </div>
+        <div class="proof" id="proof-panel-offer" role="tabpanel" aria-labelledby="proof-tab-offer" hidden>
+          <div class="proof-main">
+            <p class="proof-label">The Video</p>
+            <figure class="sample">
+              <div class="film-player"><video controls controlsList="nodownload noplaybackrate" disablePictureInPicture preload="none" playsinline poster="assets/video/sample-offer-poster.jpg"><source src="assets/video/sample-offer.mp4" type="video/mp4"></video></div>
+            </figure>
+            <p class="proof-label">The Postcard, Front and Back</p>
+            <div class="proof-cards">
+              <img src="assets/samples/card-g3-front.jpg" width="1100" height="738" loading="lazy" alt="Front of a sample postcard for a local offer, addressed to Sam at Hawkins &amp; Flynn, with a QR code to scan">
+              <img src="assets/samples/card-g3-back.jpg" width="1100" height="738" loading="lazy" alt="Back of the sample postcard: a handwritten-style message to Sam, signed JDZ Solutions">
+            </div>
+          </div>
+          <div class="proof-side">
+            <p class="proof-label">The Landing Page</p>
+            <div class="proof-phone"><img src="assets/samples/page-g3.jpg" width="520" height="1125" loading="lazy" alt="The personal landing page opened by the postcard's QR code, shown on a phone"></div>
+          </div>
+        </div>
+        <div class="proof" id="proof-panel-brand" role="tabpanel" aria-labelledby="proof-tab-brand" hidden>
+          <div class="proof-main">
+            <p class="proof-label">The Video</p>
+            <figure class="sample">
+              <div class="film-player"><video controls controlsList="nodownload noplaybackrate" disablePictureInPicture preload="none" playsinline poster="assets/video/sample-brand-poster.jpg"><source src="assets/video/sample-brand.mp4" type="video/mp4"></video></div>
+            </figure>
+            <p class="proof-label">The Postcard, Front and Back</p>
+            <div class="proof-cards">
+              <img src="assets/samples/card-g4-front.jpg" width="1100" height="738" loading="lazy" alt="Front of a sample postcard for a brand studio piece, addressed to Sam at Hawkins &amp; Flynn, with a QR code to scan">
+              <img src="assets/samples/card-g4-back.jpg" width="1100" height="738" loading="lazy" alt="Back of the sample postcard: a handwritten-style message to Sam, signed JDZ Solutions">
+            </div>
+          </div>
+          <div class="proof-side">
+            <p class="proof-label">The Landing Page</p>
+            <div class="proof-phone"><img src="assets/samples/page-g4.jpg" width="520" height="1125" loading="lazy" alt="The personal landing page opened by the postcard's QR code, shown on a phone"></div>
+          </div>
+        </div>
+
+        <p class="film-caption">Sam and Hawkins &amp; Flynn are fictional, created to demonstrate personalized media. Vehicles, prices, and dealer names are made up, the vehicles and presenter are AI-generated, and the back of the postcard is an illustration of the printed message.</p>
         <p class="film-caption">Made with <span class="term-wrap"><button type="button" class="term" aria-expanded="false" aria-controls="tip-flipick-samples">Flipick Video Studio</button><span class="term-tip" id="tip-flipick-samples" role="tooltip" hidden>Flipick Video Studio is the platform behind your postcard, your personal landing page, and your video. It turns one master into a version for each customer, with names, offers, prices, and languages changed.</span></span>.</p>
       </div>
     </section>
@@ -362,6 +422,7 @@
   <script src="script.js"></script>
   <script src="forms.js?v=3"></script>
   <script src="form-ajax.js"></script>
+  <script src="cine-tabs.js?v=4"></script>
   <script src="video-expand.js"></script>
   <script src="term-tip.js"></script>
 </body>

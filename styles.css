@@ -178,6 +178,14 @@ button, input, textarea { font: inherit; }
 .term:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 3px; }
 .term-tip { position: absolute; top: calc(100% + 10px); left: 0; z-index: 20; width: min(320px, 80vw); padding: 14px 16px; border: 1px solid rgba(52, 215, 255, .45); border-radius: 12px; background: #06101f; box-shadow: var(--shadow); color: #c6d4e0; font-size: .88rem; line-height: 1.5; text-align: left; }
 .term-tip[hidden] { display: none; }
+.proof { display: grid; grid-template-columns: 1.6fr .6fr; gap: 36px; align-items: start; }
+.proof[hidden] { display: none; }
+.proof-label { margin: 0 0 12px; color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.proof-main .proof-label:not(:first-child) { margin-top: 26px; }
+.proof-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.proof-cards img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 10px 30px rgba(0, 0, 0, .5); border: 1px solid rgba(255, 255, 255, .08); }
+.proof-phone { max-width: 270px; margin: 0 auto; padding: 8px; border-radius: 34px; border: 1px solid rgba(52, 215, 255, .45); background: #050b16; box-shadow: 0 0 44px rgba(18, 133, 255, .25), var(--shadow); }
+.proof-phone img { display: block; width: 100%; height: auto; border-radius: 26px; }
 .sample-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 .sample { margin: 0; }
 .sample figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: .9rem; }
@@ -326,6 +334,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-
   .hero-visual { min-height: 330px; }
   .hero-proof span + span { border-left: 0; padding-left: 0; }
   .service-grid, .principle-grid, .form-grid, .sample-grid { grid-template-columns: 1fr; }
+  .proof { grid-template-columns: 1fr; }
+  .proof-cards { grid-template-columns: 1fr; }
   .diagram-wide { display: none; }
   .diagram-tall { display: block; }
   .contact-shell { padding: 24px; }
