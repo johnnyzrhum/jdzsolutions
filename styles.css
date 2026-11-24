@@ -162,6 +162,17 @@ button, input, textarea { font: inherit; }
 .film-player.is-expanded { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 0; box-shadow: none; background: #01050b; }
 .film-player.is-expanded video { width: min(96vw, 1400px); max-height: 88vh; }
 .film-player.is-expanded .expand-btn { top: 16px; right: 16px; }
+.ico { width: 56px; height: 56px; margin-bottom: 14px; display: block; }
+.ico * { fill: none; stroke: var(--cyan); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ico .f { fill: rgba(52, 215, 255, .16); }
+.diagram { width: 100%; height: auto; display: block; margin: 34px 0 30px; }
+.diagram text { fill: #c6d4e0; font: 600 13px Inter, system-ui, sans-serif; }
+.diagram .cap { fill: #7f93a8; font: 500 11px Inter, system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.diagram .ln { stroke: var(--line); stroke-width: 1.5; fill: none; }
+.diagram .bx { fill: rgba(3, 12, 24, .75); stroke: var(--blue); stroke-width: 2; }
+.diagram .mx { fill: rgba(3, 12, 24, .75); stroke: var(--cyan); stroke-width: 1.6; }
+.diagram .ic { fill: none; stroke: var(--cyan); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.diagram-tall { display: none; max-width: 420px; margin-left: auto; margin-right: auto; }
 .sample-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 .sample { margin: 0; }
 .sample figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: .9rem; }
@@ -310,6 +321,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-
   .hero-visual { min-height: 330px; }
   .hero-proof span + span { border-left: 0; padding-left: 0; }
   .service-grid, .principle-grid, .form-grid, .sample-grid { grid-template-columns: 1fr; }
+  .diagram-wide { display: none; }
+  .diagram-tall { display: block; }
   .contact-shell { padding: 24px; }
   .contact-form .button { justify-self: stretch; }
   .footer-inner { flex-direction: column; gap: 8px; }
