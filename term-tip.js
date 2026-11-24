@@ -1,5 +1,5 @@
-// Info bubble on the product name: hover, focus or tap shows it; Esc, a tap elsewhere or the
-// mouse leaving hides it. It never navigates, so a visitor can't leave the page by accident.
+// Info bubble on the product name: a click or tap shows it; clicking again, Esc, or a click
+// elsewhere hides it. It never navigates, so a visitor can't leave the page by accident.
 (function () {
   document.querySelectorAll('.term-wrap').forEach(function (wrap) {
     var button = wrap.querySelector('.term');
@@ -21,12 +21,8 @@
 
     button.addEventListener('click', function (e) {
       e.stopPropagation();
-      if (tip.hidden) show();
+      if (tip.hidden) show(); else hide();
     });
-    wrap.addEventListener('mouseenter', show);
-    wrap.addEventListener('mouseleave', hide);
-    button.addEventListener('focus', show);
-    button.addEventListener('blur', hide);
     document.addEventListener('click', hide);
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
   });
