@@ -48,3 +48,10 @@
   var subject = refField.form.querySelector('input[name="_subject"]');
   if (subject) subject.value += ' (' + ref + ')';
 })();
+
+// Fills the hidden "time_zone" field from the browser, so "best time to reach you" has a zone.
+(function () {
+  var tz = document.querySelector('.contact-form input[name="time_zone"]');
+  if (!tz) return;
+  try { tz.value = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+})();
