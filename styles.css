@@ -173,6 +173,11 @@ button, input, textarea { font: inherit; }
 .diagram .mx { fill: rgba(3, 12, 24, .75); stroke: var(--cyan); stroke-width: 1.6; }
 .diagram .ic { fill: none; stroke: var(--cyan); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .diagram-tall { display: none; max-width: 420px; margin-left: auto; margin-right: auto; }
+.term-wrap { position: relative; display: inline; }
+.term { padding: 0; border: 0; border-bottom: 1px dotted var(--blue); background: none; color: var(--blue); font: inherit; cursor: help; }
+.term:hover, .term:focus-visible { color: var(--cyan); border-bottom-color: var(--cyan); }
+.term-tip { position: absolute; top: calc(100% + 10px); left: 0; z-index: 20; width: min(320px, 80vw); padding: 14px 16px; border: 1px solid rgba(52, 215, 255, .45); border-radius: 12px; background: #06101f; box-shadow: var(--shadow); color: #c6d4e0; font-size: .88rem; line-height: 1.5; text-align: left; }
+.term-tip[hidden] { display: none; }
 .sample-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 .sample { margin: 0; }
 .sample figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: .9rem; }
