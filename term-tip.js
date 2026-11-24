@@ -6,10 +6,7 @@
     var tip = wrap.querySelector('.term-tip');
     if (!button || !tip) return;
 
-    var shownAt = 0;
-
     function show() {
-      shownAt = Date.now();
       tip.hidden = false;
       tip.style.left = '0px';
       var rect = tip.getBoundingClientRect();
@@ -25,7 +22,6 @@
     button.addEventListener('click', function (e) {
       e.stopPropagation();
       if (tip.hidden) show();
-      else if (Date.now() - shownAt > 400) hide();
     });
     wrap.addEventListener('mouseenter', show);
     wrap.addEventListener('mouseleave', hide);
