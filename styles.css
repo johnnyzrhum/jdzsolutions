@@ -185,7 +185,7 @@ button, input, textarea { font: inherit; }
 .proof-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .proof-cards img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 10px 30px rgba(0, 0, 0, .5); border: 1px solid rgba(255, 255, 255, .08); }
 .proof-phone { max-width: 270px; margin: 0 auto; padding: 8px; border-radius: 34px; border: 1px solid rgba(52, 215, 255, .45); background: #050b16; box-shadow: 0 0 44px rgba(18, 133, 255, .25), var(--shadow); }
-.proof-phone img { display: block; width: 100%; height: auto; border-radius: 26px; }
+.proof-phone img, .proof-phone video { display: block; width: 100%; height: auto; border-radius: 26px; }
 .sample-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 .sample { margin: 0; }
 .sample figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: .9rem; }
