@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>
+    // Old printed/landing-page links carry ?ref=<agency>; send those visitors to the campaign page.
+    if (/[?&]ref=/.test(location.search)) location.replace('/hello/' + location.search + location.hash);
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="One cinematic master, infinite versions, every medium: video, print, digital and social. Flipick Video Studio for agencies, with JDZ Solutions helping you put it to work.">
   <meta name="theme-color" content="#020711">
@@ -44,7 +48,7 @@
   </header>
 
   <main id="main">
-    <section class="hero section-grid">
+    <section class="hero section-grid hero-text-first">
       <div class="hero-circuit hero-circuit-left" aria-hidden="true"></div>
       <div class="hero-circuit hero-circuit-right" aria-hidden="true"></div>
 
@@ -62,13 +66,7 @@
           </p>
           <p class="hero-slogan">One cinematic master. Infinite versions. Every medium.</p>
           <p class="hero-text">
-            Infinite versions in every medium from one cinematic master:
-            video, print, digital and social. You choose the mix.
-          </p>
-          <p class="hero-text">
-            The postcard you received, your personal page and your video all came
-            from one master, made with <span class="term-wrap"><button type="button" class="term" aria-expanded="false" aria-controls="tip-flipick">Flipick Video Studio</button><span class="term-tip" id="tip-flipick" role="tooltip" hidden>Flipick Video Studio is the platform for creating personalized media, from postcards and landing pages to social posts, digital ads, and video. It turns one master into a version for each customer, with names, offers, prices, and languages changed.</span></span> and personalized for you.
-            Your clients can have the same.
+            Video, print, digital and social from one master, made with <span class="term-wrap"><button type="button" class="term" aria-expanded="false" aria-controls="tip-flipick">Flipick Video Studio</button><span class="term-tip" id="tip-flipick" role="tooltip" hidden>Flipick Video Studio is the platform for creating personalized media, from postcards and landing pages to social posts, digital ads, and video. It turns one master into a version for each customer, with names, offers, prices, and languages changed.</span></span>. You choose the mix.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#get-in-touch">Get in touch</a>
@@ -102,8 +100,8 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">See It For Your Clients</p>
-          <h2>One master, shown as a video, a postcard, and a page</h2>
-          <p>Four examples for a fictional agency. Each one starts from a single master.</p>
+          <h2>See what one master can do for your clients</h2>
+          <p>Four automotive examples for a fictional agency, each shown as a video, a postcard, and a landing page. These are examples, not the full list: the same master can also become social posts and digital ads, in any category.</p>
         </div>
 
         <div class="cine-tabs reveal" role="tablist" aria-label="Sample examples">
@@ -183,7 +181,7 @@
         </div>
 
         <p class="film-caption">Sam and Hawkins &amp; Flynn are fictional, created to demonstrate personalized media. Vehicles, prices, and dealer names are made up, the vehicles and presenter are AI-generated, and the back of the postcard is an illustration of the printed message.</p>
-        <p class="film-caption">Made with <span class="term-wrap"><button type="button" class="term" aria-expanded="false" aria-controls="tip-flipick-samples">Flipick Video Studio</button><span class="term-tip" id="tip-flipick-samples" role="tooltip" hidden>Flipick Video Studio is the platform for creating personalized media, from postcards and landing pages to social posts, digital ads, and video. It turns one master into a version for each customer, with names, offers, prices, and languages changed.</span></span>.</p>
+        <p class="film-caption">Made with Flipick Video Studio.</p>
       </div>
     </section>
 
@@ -192,19 +190,8 @@
         <div class="section-heading reveal">
           <p class="eyebrow">How It Works For Your Clients</p>
           <h2>One master, a version for every customer, in every medium</h2>
-          <p>
-            Make the master once. Then produce versions with each dealer's,
-            customer's, or location's name, offer, price, and language, and
-            deliver them wherever your clients need them. Approve once. The
-            engine does the rest.
-          </p>
         </div>
 
-        <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-      <symbol id="i-master" viewBox="0 0 56 56"><rect class="f" x="6" y="12" width="44" height="32" rx="5"/><path d="M24 22l12 6-12 6z"/><path d="M6 8h6M44 8h6M6 48h6M44 48h6"/></symbol>
-      <symbol id="i-versions" viewBox="0 0 56 56"><rect x="16" y="6" width="34" height="24" rx="4" opacity=".5"/><rect x="11" y="14" width="34" height="24" rx="4" opacity=".75"/><rect class="f" x="6" y="22" width="34" height="26" rx="4"/><circle cx="16" cy="32" r="3.5"/><path d="M24 31h12M12 41h24"/></symbol>
-      <symbol id="i-media" viewBox="0 0 56 56"><rect x="5" y="7" width="21" height="16" rx="3"/><path d="M13 12l6 3-6 3z"/><rect x="30" y="7" width="21" height="16" rx="3"/><rect x="42" y="10" width="6" height="6" rx="1"/><path d="M34 17h6M34 20h10"/><rect x="5" y="30" width="21" height="19" rx="3"/><path d="M5 36h21M9 41h8M9 44h12"/><rect x="34" y="28" width="13" height="22" rx="3"/><path d="M38 33h5M38 37h5"/></symbol>
-    </defs></svg>
         <svg class="diagram diagram-wide" viewBox="0 0 960 300" role="img" aria-label="One cinematic master branching into a version for each dealer, customer, and location, delivered as video, postcard, landing page, or ad sizes">
           <text class="cap" x="60" y="22">One master</text><text class="cap" x="380" y="22">A version for each</text><text class="cap" x="760" y="22">Delivered as you choose</text>
           <rect class="bx" x="30" y="105" width="130" height="90" rx="10"/><path class="ic" d="M80 130l28 15-28 15z"/><text x="95" y="182" text-anchor="middle" style="font-size:12px">Cinematic master</text>
@@ -213,7 +200,7 @@
           <text x="345" y="65">Dealer A · English</text><text x="345" y="125">Dealer B · Español</text><text x="345" y="185">Location 3 · spring offer</text><text x="345" y="245">Customer 4 · new price</text>
           <g class="ln"><path d="M520 60 C600 60 620 110 700 110"/><path d="M520 120 C600 120 620 110 700 110"/><path d="M520 180 C600 180 620 190 700 190"/><path d="M520 240 C600 240 620 190 700 190"/></g>
           <g class="mx"><rect x="700" y="92" width="100" height="36" rx="8"/><rect x="812" y="92" width="100" height="36" rx="8"/><rect x="700" y="172" width="100" height="36" rx="8"/><rect x="812" y="172" width="100" height="36" rx="8"/></g>
-          <text x="750" y="115" text-anchor="middle">Video</text><text x="862" y="115" text-anchor="middle">Postcard</text><text x="750" y="195" text-anchor="middle">Page</text><text x="862" y="195" text-anchor="middle">Ad sizes</text>
+          <text x="750" y="115" text-anchor="middle">Video</text><text x="862" y="115" text-anchor="middle">Postcard</text><text x="750" y="195" text-anchor="middle">Page</text><text x="862" y="195" text-anchor="middle">Social &amp; ads</text>
         </svg>
         <svg class="diagram diagram-tall" viewBox="0 0 360 600" role="img" aria-label="One cinematic master branching into a version for each dealer, customer, and location, delivered as video, postcard, landing page, or ad sizes">
           <text class="cap" x="180" y="18" text-anchor="middle">One master</text>
@@ -225,29 +212,10 @@
           <g class="ln"><path d="M330 306V372H180V408"/></g>
           <text class="cap" x="180" y="426" text-anchor="middle">Delivered as you choose</text>
           <g class="mx"><rect x="40" y="436" width="130" height="44" rx="8"/><rect x="190" y="436" width="130" height="44" rx="8"/><rect x="40" y="494" width="130" height="44" rx="8"/><rect x="190" y="494" width="130" height="44" rx="8"/></g>
-          <text x="105" y="463" text-anchor="middle">Video</text><text x="255" y="463" text-anchor="middle">Postcard</text><text x="105" y="521" text-anchor="middle">Page</text><text x="255" y="521" text-anchor="middle">Ad sizes</text>
+          <text x="105" y="463" text-anchor="middle">Video</text><text x="255" y="463" text-anchor="middle">Postcard</text><text x="105" y="521" text-anchor="middle">Page</text><text x="255" y="521" text-anchor="middle">Social &amp; ads</text>
         </svg>
 
-        <div class="principle-grid">
-          <article class="principle reveal">
-            <svg class="ico" aria-hidden="true"><use href="#i-master"/></svg>
-            <h3>Made Once</h3>
-            <p>Start from one cinematic master, with each client's branding, products, and assets kept separate.</p>
-          </article>
-          <article class="principle reveal">
-            <svg class="ico" aria-hidden="true"><use href="#i-versions"/></svg>
-            <h3>Versions for Everyone</h3>
-            <p>Change names, offers, prices, and languages to produce a version for every dealer, customer, or location.</p>
-          </article>
-          <article class="principle reveal">
-            <svg class="ico" aria-hidden="true"><use href="#i-media"/></svg>
-            <h3>Every Medium</h3>
-            <p>Choose how each version is delivered: video, a postcard, a landing page, ad sizes, or stills, in any mix, after your clients and your team have reviewed it.</p>
-          </article>
-        </div>
-
-        <p class="form-note">Powered by you. Assisted by AI. Postcards first; mailers, inserts, and printed weekly ads follow from the same versions.</p>
-      </div>
+              </div>
     </section>
 
     <section class="section section-dark">
@@ -261,32 +229,32 @@
           <article class="glass-card reveal">
             <div class="icon-box">◈</div>
             <h3>Multi-Client Production</h3>
-            <p>Produce media for many clients, each with their own brand structure and assets.</p>
+            <p>Media for many clients, each with their own brand and assets.</p>
           </article>
           <article class="glass-card reveal">
             <div class="icon-box">⇌</div>
             <h3>Campaign Variations</h3>
-            <p>Generate versions by audience, offer, language, and medium from one creative direction.</p>
+            <p>Versions by audience, offer, language, and medium from one direction.</p>
           </article>
           <article class="glass-card reveal">
             <div class="icon-box">⬡</div>
             <h3>Dealer & Local Marketing</h3>
-            <p>Give every dealer, location, or service customer a version with their own name, offer, and prices.</p>
+            <p>A version for every dealer, location, or service customer.</p>
           </article>
           <article class="glass-card reveal">
             <div class="icon-box">⧉</div>
             <h3>E-commerce Client Support</h3>
-            <p>Support merchant clients with product and catalog video, pages, and ad sizes.</p>
+            <p>Product video, pages, and ad sizes for merchant clients.</p>
           </article>
           <article class="glass-card reveal">
             <div class="icon-box">▶</div>
-            <h3>Postcards, Pages & Ads</h3>
-            <p>Carry one campaign from video into postcards, landing pages, and social and display ads.</p>
+            <h3>Print, Pages, Social & Ads</h3>
+            <p>One campaign carried into print, landing pages, social posts, and digital ads.</p>
           </article>
           <article class="glass-card reveal">
             <div class="icon-box">↻</div>
-            <h3>Capacity Without Headcount</h3>
-            <p>Grow production capacity for current and new clients without equivalent staff growth.</p>
+            <h3>Quicker Versions</h3>
+            <p>A version for a new client or offer without starting a new production.</p>
           </article>
         </div>
       </div>
@@ -296,23 +264,16 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">About JDZ Solutions</p>
-          <h2>A technology partner for agency media</h2>
+          <h2>Help putting personalized media to work</h2>
           <p>
-            JDZ Solutions is a Florida company that helps agencies bring
-            personalized media into the services they already sell. We have
-            more than 30 years in technology, operations, product
-            development, and customer experience. We show your team the
-            workflow, plan how it fits your clients, and support you through
-            adoption. JDZ Solutions and <span class="term-wrap"><button type="button" class="term" aria-expanded="false" aria-controls="tip-flipick-co">Flipick</button><span class="term-tip" id="tip-flipick-co" role="tooltip" hidden>Flipick is the company that makes Flipick Video Studio. JDZ Solutions works directly with Flipick, and also builds and advises on the product.</span></span> work side by side. We bring
-            <span class="term-wrap"><button type="button" class="term" aria-expanded="false" aria-controls="tip-flipick-about">Flipick Video Studio</button><span class="term-tip" id="tip-flipick-about" role="tooltip" hidden>Flipick Video Studio is the platform for creating personalized media, from postcards and landing pages to social posts, digital ads, and video. It turns one master into a version for each customer, with names, offers, prices, and languages changed.</span></span> to agencies and shape it around what they need, and we
-            also build and advise on the product itself.
+            JDZ Solutions is a Florida company that helps agencies bring personalized media into the services they already sell. We show your team the workflow, fit it to your clients, and support you through adoption. We work directly with Flipick, the company that makes Flipick Video Studio, and also build and advise on the product.
           </p>
         </div>
 
         <aside class="experience-panel glass-card reveal narrow">
           <div>
             <strong>30+</strong>
-            <span>Years across technology, operations, product development, and customer experience.</span>
+            <span>Years of experience behind JDZ Solutions across technology, operations, product development, and customer experience.</span>
           </div>
         </aside>
       </div>
@@ -383,13 +344,13 @@
           <input type="hidden" name="inquiry_type" value="Agency Use Case">
 
           <!-- Email Subject -->
-          <input type="hidden" name="_subject" value="Agency postcard reply">
+          <input type="hidden" name="_subject" value="Agency inquiry">
 
           <!-- Disable CAPTCHA -->
           <input type="hidden" name="_captcha" value="false">
 
           <!-- Honeypot Spam Trap -->
-          <input type="text" name="_gotcha" style="display:none">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
           <button class="button button-primary" type="submit">
             Send

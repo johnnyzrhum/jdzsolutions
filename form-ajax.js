@@ -26,6 +26,17 @@
       })
         .then(function (response) {
           if (response.ok) {
+            // Campaign pages show the thank-you in place (data-thanks="inline") instead of leaving the page.
+            if (form.dataset.thanks === 'inline') {
+              var thanks = document.getElementById(form.dataset.thanksTarget);
+              form.hidden = true;
+              if (thanks) {
+                thanks.hidden = false;
+                thanks.focus();
+                thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+              return;
+            }
             window.location.href = 'thank-you.html';
             return;
           }

@@ -331,6 +331,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-
   .hero-inner, .global-layout, .why-layout, .contact-shell { grid-template-columns: 1fr; }
   .hero-copy { order: 2; }
   .hero-visual { order: 1; min-height: 420px; }
+  .hero-text-first .hero-copy { order: 1; }
+  .hero-text-first .hero-visual { order: 2; min-height: 240px; }
   .hero-visual img { width: min(470px, 88vw); }
   .hero-visual svg { width: min(420px, 82vw); }
   .service-grid { grid-template-columns: repeat(2, 1fr); }
@@ -355,3 +357,19 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-
   .contact-form .button { justify-self: stretch; }
   .footer-inner { flex-direction: column; gap: 8px; }
 }
+
+/* Campaign page (/hello/...): short, no site navigation */
+.hello-hero { min-height: auto; }
+.hello-hero .hero-inner { padding-block: 56px 40px; }
+.hello-line { margin-top: 28px; }
+.hello-thanks { padding: 28px; border: 1px solid rgba(52, 215, 255, .45); border-radius: 16px; background: rgba(3, 12, 24, .75); }
+.hello-thanks h3 { margin: 0; font-size: 1.5rem; }
+.hello-credit { margin-top: 40px; }
+.hello-title .accent { color: var(--blue); text-shadow: 0 0 28px rgba(21, 140, 255, .38); }
+.principle-grid.four { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .principle-grid.four { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .principle-grid.four { grid-template-columns: 1fr; } }
+.hello-page .form-note { font-size: .84rem; }
+.hello-actions { margin-top: 28px; }
+.hello-credit { color: var(--cyan); font-size: .9rem; font-weight: 600; }
+.contact-form[hidden] { display: none; }

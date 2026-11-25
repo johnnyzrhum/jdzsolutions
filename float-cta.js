@@ -3,9 +3,11 @@
 (function () {
   var cta = document.querySelector('.float-cta');
   var hero = document.querySelector('.hero');
-  var contact = document.getElementById('get-in-touch');
+  // End markers: elements tagged data-float-end (the form itself on short pages), else the whole contact section.
+  var ends = Array.prototype.slice.call(document.querySelectorAll('[data-float-end]'));
+  if (!ends.length) { var contact = document.getElementById('get-in-touch'); if (contact) ends = [contact]; }
   var footer = document.querySelector('.site-footer');
-  if (!cta || !hero || !contact || !('IntersectionObserver' in window)) return;
+  if (!cta || !hero || !ends.length || !('IntersectionObserver' in window)) return;
 
   var heroVisible = true;
   var endVisible = false;
@@ -22,19 +24,21 @@
     }
   }
 
-  var seen = { contact: false, footer: false };
+  var seen = [];
+  var endObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { seen[e.target.__floatIdx] = e.isIntersecting; });
+    endVisible = seen.some(Boolean);
+    update();
+  });
   new IntersectionObserver(function (entries) {
     entries.forEach(function (e) { heroVisible = e.isIntersecting; });
     update();
   }).observe(hero);
-
-  var endObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) { seen[e.target === contact ? 'contact' : 'footer'] = e.isIntersecting; });
-    endVisible = seen.contact || seen.footer;
-    update();
+  ends.concat(footer ? [footer] : []).forEach(function (el, i) {
+    el.__floatIdx = i;
+    seen[i] = false;
+    endObserver.observe(el);
   });
-  endObserver.observe(contact);
-  if (footer) endObserver.observe(footer);
 
   var samples = document.getElementById('samples');
   if (samples) new MutationObserver(update).observe(samples, { subtree: true, attributes: true, attributeFilter: ['class'] });
